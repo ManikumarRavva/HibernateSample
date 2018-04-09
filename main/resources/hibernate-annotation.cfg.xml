@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection properties - Driver, URL, user, password -->
+		<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="hibernate.connection.url">jdbc:sqlserver://ggku2ser5:1433;databaseName=GGK_PMS_ReviewDashboard</property>
+		<property name="hibernate.connection.username">hcsc</property>
+		<property name="hibernate.connection.password">Hyderabad008</property>
+		
+		<!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+		<property name="hibernate.hbm2ddl.auto">auto</property>
+		  <property name="connection.autocommit">true</property>
+		  <property name="show_sql">true</property>
+		<!-- Mapping with model class containing annotations -->
+		<mapping class="com.journaldev.hibernate.model.Employee1"/>
+		<mapping class="com.journaldev.hibernate.model.Person"/>
+	</session-factory>
+</hibernate-configuration>
